@@ -1,6 +1,6 @@
 # 3D Conway's Game Of Life
 
-![2333](gifs/2333.png)
+![2333](gifs/2333.gif)
 Simulation using the 2333 rules
 
 This project is a simulation of the Conway's game of life in a 3D environment.
