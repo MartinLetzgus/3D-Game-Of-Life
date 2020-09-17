@@ -46,7 +46,7 @@ def play(grid,rules,save_pictures=True,angle_between_steps=6,frames_by_step=2):
                             ax.plot_surface(np.atleast_2d(-0.5)+x+0.5,X+y+0.5,Y+z+0.5, alpha=0.5, color=color)
             for ii in range (frames_by_step):
                 ax.view_init(elev=10., azim=angle)
-                plt.savefig("pngs/step_"+str(i)+"_"+str(ii)+".png")
+                plt.savefig(output_path+str(i)+"_"+str(ii)+".png")
                 angle += angle_between_steps/frames_by_step
             plt.clf()
         
@@ -56,6 +56,7 @@ random_start = 0.1
 max_steps = 200
 angle_between_steps = 6
 frames_by_step = 2
+output_path = "pngs/step"
 
 rules = wxyzRules(2,3,3,3) 
 
