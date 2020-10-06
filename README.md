@@ -1,6 +1,6 @@
 # 3D Conway's Game Of Life
 
-![bar_of_three](gifs/bar_of_three.gif) | ![t](gifs/t.gif) | ![cross](gifs/cross.gif)
+![bar_of_three](gifs/bar_of_three.gif=100x)  ![t](gifs/t.gif=100x)  ![cross](gifs/cross.gif=100x)
 
 Simulation using the 2333 rules
 
