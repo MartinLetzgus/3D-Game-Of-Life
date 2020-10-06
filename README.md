@@ -1,8 +1,6 @@
 # 3D Conway's Game Of Life
 
-<img src="gifs/bar_of_three.gif" width="200" height="200" />
-<img src="t.gif" width="200" height="200" />
-<img src="cross.gif" width="200" height="200" />
+<img src="gifs/bar_of_three.gif" width="200" height="200" /><img src="gifs/t.gif" width="200" height="200" /><img src="gifs/cross.gif" width="200" height="200" />
 
 Simulation using the 2333 rules
 
