@@ -2,13 +2,13 @@
 
 <img src="gifs/bar_of_three.gif" width="200" height="200" /><img src="gifs/t.gif" width="200" height="200" /><img src="gifs/cross.gif" width="200" height="200" />
 
-Simulation using the 2333 rules
+Simulations using the 2333 rules
 
 This project is a simulation of the Conway's game of life in a 3D environment.
 
 In the main you can define some parameters :
 - `dim` gives the number of dimension of the environment. The visualization is only available in 3D for the moment
-- `size` is the size of each dimension, if set to 10 the environment will be 10*10*10
+- `size` is the size of each dimension, if set to 10 the environment will be 10\*10\*10
 - `random_start` is a number between 0 and 1 giving the chance of each cell to be alive at time 0
 - `max_steps` The game will stop when all cells are dead or when a given number of steps have been computed
 - `angle_between_steps` if you want the gif to turn and the pov to change between each steps you can precise the angle between two steps. If you don't want it to turn, just put the value to 0
