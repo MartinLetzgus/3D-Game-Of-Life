@@ -1,4 +1,8 @@
+from mpl_toolkits import mplot3d
 import numpy as np
+from itertools import product, combinations
+import matplotlib.pyplot as plt
+import matplotlib as mpl
 from numpy import random
                     
 class Grid():
@@ -101,6 +105,40 @@ class Grid():
             else:
                 new_array[coord] = 0
         self.array = new_array
+        
+    def clean(self):
+        self.array = np.zeros([self.size]*self.dim)
+        
+    def save2D(self, colorz, name_of_file):
+        assert(self.dim==2)
+        cmap = mpl.colors.ListedColormap(colorz)
+        plt.imsave(name_of_file,self.array, cmap=cmap,vmax=3,dpi=500)
+        plt.clf()
+        
+    def save3D(self,colorz,name_of_file,angle):
+        assert(self.dim==3)
+        fig = plt.figure()
+        ax = plt.axes(projection='3d')    
+        ax.set_xlim(0,self.size+1)
+        ax.set_ylim(0,self.size+1)
+        ax.set_zlim(0,self.size+1)
+        ax.set_axis_off()
+        for x in range (self.size):
+            for y in range (self.size):
+                for z in range (self.size):
+                    if self.array[x,y,z]!=0: 
+                        color = colorz(self.array[x,y,z])
+                        r = [-0.5,0.5]
+                        X, Y = np.meshgrid(r, r)
+                        ax.plot_surface(X+x+0.5,Y+y+0.5,np.atleast_2d(0.5)+z+0.5, alpha=0.5, color=color)
+                        ax.plot_surface(X+x+0.5,Y+y+0.5,np.atleast_2d(-0.5)+z+0.5, alpha=0.5, color=color)
+                        ax.plot_surface(X+x+0.5,np.atleast_2d(-0.5)+y+0.5,Y+z+0.5, alpha=0.5, color=color)
+                        ax.plot_surface(X+x+0.5,np.atleast_2d(0.5)+y+0.5,Y+z+0.5, alpha=0.5, color=color)
+                        ax.plot_surface(np.atleast_2d(0.5)+x+0.5,X+y+0.5,Y+z+0.5, alpha=0.5, color=color)
+                        ax.plot_surface(np.atleast_2d(-0.5)+x+0.5,X+y+0.5,Y+z+0.5, alpha=0.5, color=color)
+        ax.view_init(elev=10., azim=angle)
+        plt.savefig(str(name_of_file))
+        plt.clf()
 
         
                         

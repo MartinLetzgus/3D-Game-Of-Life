@@ -3,8 +3,8 @@ from PIL import Image
 import os
 
 # filepaths
-fp_in = "pngs2/cross*"
-fp_out = "gifs/cross.gif"
+fp_in = "pngs/radom*"
+fp_out = "gifs/radom2D.gif"
 
 files = glob.glob(fp_in)
 print(files)

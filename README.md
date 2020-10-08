@@ -1,13 +1,16 @@
 # 3D Conway's Game Of Life
 
-<img src="gifs/bar_of_three.gif" width="200" height="200" /><img src="gifs/t.gif" width="200" height="200" /><img src="gifs/cross.gif" width="200" height="200" />
+<p align="center">
+<img src="gifs/bar_of_three.gif" width="200" height="200"/><img src="gifs/t.gif" width="200" height="200"/><img src="gifs/cross.gif" width="200" height="200"/>
+<img src="gifs/radom2D.gif" width="500" height="500"/>
+</p>
 
-Simulations using the 2333 rules
+Simulations using the 2333 rules in 3D and 2D
 
-This project is a simulation of the Conway's game of life in a 3D environment.
+This project is a simulation of the Conway's game of life in a 3D environment. In fact, the game of life can be simulated in any given numbe of dimensions, but can only be visualized in 2D and 3D.
 
 In the main you can define some parameters :
-- `dim` gives the number of dimension of the environment. The visualization is only available in 3D for the moment
+- `dim` gives the number of dimension of the environment
 - `size` is the size of each dimension, if set to 10 the environment will be 10\*10\*10
 - `random_start` is a number between 0 and 1 giving the chance of each cell to be alive at time 0
 - `max_steps` The game will stop when all cells are dead or when a given number of steps have been computed
