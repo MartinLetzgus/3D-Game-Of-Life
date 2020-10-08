@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="gifs/bar_of_three.gif" width="200" height="200"/><img src="gifs/t.gif" width="200" height="200"/><img src="gifs/cross.gif" width="200" height="200"/>
-<img src="gifs/radom2D.gif" width="500" height="500"/>
+<img src="gifs/radom2D.gif" width="200" height="200"/>
 </p>
 
 Simulations using the 2333 rules in 3D and 2D
